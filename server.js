@@ -68,7 +68,7 @@ function gateKeeper(req, res, next) {
   var credentials = qs.parse(req.get('x-username-password'));
   console.log(credentials);
   req.user = USERS.find(function(element){
-     if(element.firstName = credentials.user && element.password == credentials.pass){
+     if(element.firstName == credentials.user && element.password == credentials.pass){
        console.log(element);
        return element;
      }    
